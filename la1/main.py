@@ -1,4 +1,4 @@
-
+"""Для каждой вершины графа вывести её степень."""
 class Graph(object):
 
     def __init__(self, graph_dict=None):

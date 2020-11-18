@@ -34,6 +34,10 @@ dfs(u1, visited1, prev1, g)
 """Найдем все пути из u2  в остальные вершины """
 dfs(u2, visited2, prev2, g)
 
+print(prev1)
+print(prev2)
+print(visited1)
+print(visited2)
 if prev1[v] <= prev2[v]:
     print("Путь из u1 в v короче")
 else:

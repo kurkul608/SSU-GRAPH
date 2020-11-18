@@ -25,10 +25,7 @@ while min_dist < INF:
         if dist[i] + w[i][j] < dist[j]:
             dist[j] = dist[i] + w[i][j]
             min_dist = INF
-for j in range(n):
-    if not used[j] and dist[j] < min_dist:
-        min_dist = dist[j]
-        min_vertex = j
+
 
 for i in range(n):
     if i != start:

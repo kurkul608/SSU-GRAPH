@@ -26,7 +26,7 @@ while min_dist < INF:
             dist[j] = dist[i] + w[i][j]
             min_dist = INF
 
-
+print(dist)
 for i in range(n):
     if i != start:
         if dist[i] <= N:

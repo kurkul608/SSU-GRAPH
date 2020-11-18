@@ -14,6 +14,7 @@ n = 3
 Color = [0] * (n + 1)
 
 """Если мы не попадали в вершину, то она белая - 0, если в обработке, то серая - 1. если прошли через вершину, то она становится черной - 2, если из серой вершины мы можем попасть в черную, то значит, что цикл есть"""
+count = 0
 def DFS(start):
     Color[start] = 1
     for u in V[start]:
@@ -21,9 +22,12 @@ def DFS(start):
             DFS(u)
         elif Color[start] == 1:
             print('Цикл найден')
+            count = count + 1
     Color[start] = 2
 
 
 for i in range(1, n + 1):
     if Color[i] == 0:
         DFS(i)
+
+print("Требуется удалить ", count, " Ребер")

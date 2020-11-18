@@ -13,7 +13,7 @@ class Graph(object):
         return list(self.__graph_dict.keys())
 
     def edges(self):
-        """ Возвращает вершины графа """
+        """ Возвращает ребра графа """
         return self.__generate_edges()
 
     def add_vertex(self, vertex):
